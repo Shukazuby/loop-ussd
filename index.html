@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop USSD</title>
+</head>
+<body>
+    <script>
+
+    //   BANK USSD Assignment
+        let accBal = 5000000
+        while (accBal == 5000000){
+            let pin =  Number(prompt("Enter USSD Code:"));
+        if(pin === 202) {
+            alert("Welcome to Zbank")
+            let bank =  Number( prompt(`What do you want to do?
+            1. Quick Transfer
+            2. Quick Airtime
+            3. Quick Balance`)); 
+            if(bank === 1){
+                prompt("Input Beneficiary's Bank") 
+                Number(prompt("Input Amount"))
+                prompt(`Add Beneficiary
+                1. Marzooqa Shuka
+                2. Zubaidat Shuka
+                3. Fauzeeyah Shuka`);
+                let sure = prompt(`Are You Sure? 
+                1. Yes
+                2. No`)  
+                    if (sure === 1 ){
+                        alert("Click OK to Proceed")
+                        alert("Congrats! Transaction Successful")
+                    } else{
+                        alert("Please try again")
+                    }
+            } else if(bank === 2){
+                let airtime = prompt(`Please Select Option
+                    1. Buy For Self
+                    2. Buy for Others`);  
+                    if(airtime == "1"){
+                    let airtimeAmount = Number(prompt("Enter Amount"))
+                        alert("You are about to buy airtime for yourself")
+                    let enterPin = Number(prompt("Enter Pin"))
+                            if(enterPin == pin){
+                                alert(`You have successfully purchase airtime of ${airtimeAmount}`);             
+                            }else{
+                                alert("Enter the right pin");             
+                            }
+                    } 
+                    else if( airtime == "2"){
+                    let phoneNum = Number(prompt("Enter Phone Number"))
+                    let  airtimeAmount = Number(prompt("Enter Airtime Amount"))
+                        alert(`You are about to buy airtime for ${phoneNum}`)
+                        Number(prompt("Enter Pin"));
+                        alert(`You have successfully purchase airtime of ${airtimeAmount} for ${phoneNum}`)             
+                    }else{
+                        alert("Please try again")
+                    }
+            } else if(bank === 3){
+                Number(prompt("Enter Account Number"))
+                        Number(prompt("Enter Pin"))
+                        alert("You will receive an SMS shortly")
+                        alert("Thanks for choosing Zbank");
+                
+            } else {
+                alert("You have entered the wrong code")
+            }
+
+        }else {
+            alert("====================")
+        }
+
+        }
+        let pin =  Number(prompt("Enter USSD Code:"));
+        if(pin === 2020) {
+            alert("Welcome to Zbank")
+            let bank =  Number( prompt(`What do you want to do?
+            1. Quick Transfer
+            2. Quick Airtime
+            3. Quick Balance`)); 
+            if(bank === 1){
+                prompt("Input Beneficiary's Bank") 
+                Number(prompt("Input Amount"))
+                prompt(`Add Beneficiary
+                1. Marzooqa Shuka
+                2. Zubaidat Shuka
+                3. Fauzeeyah Shuka`);
+                let sure = prompt(`Are You Sure? 
+                1. Yes
+                2. No`)  
+                    if (sure === 1 ){
+                        alert("Click OK to Proceed")
+                        alert("Congrats! Transaction Successful")
+                    } else{
+                        alert("Please try again")
+                    }
+            } else if(bank === 2){
+                let airtime = prompt(`Please Select Option
+                    1. Buy For Self
+                    2. Buy for Others`);  
+                    if(airtime == "1"){
+                    let airtimeAmount = Number(prompt("Enter Amount"))
+                        alert("You are about to buy airtime for yourself")
+                    let enterPin = Number(prompt("Enter Pin"))
+                            if(enterPin == pin){
+                                alert(`You have successfully purchase airtime of ${airtimeAmount}`);             
+                            }else{
+                                alert("Enter the right pin");             
+                            }
+                    } 
+                    else if( airtime == "2"){
+                    let phoneNum = Number(prompt("Enter Phone Number"))
+                    let  airtimeAmount = Number(prompt("Enter Airtime Amount"))
+                        alert(`You are about to buy airtime for ${phoneNum}`)
+                        Number(prompt("Enter Pin"));
+                        alert(`You have successfully purchase airtime of ${airtimeAmount} for ${phoneNum}`)             
+                    }else{
+                        alert("Please try again")
+                    }
+            } else if(bank === 3){
+                Number(prompt("Enter Account Number"))
+                        Number(prompt("Enter Pin"))
+                        alert("You will receive an SMS shortly")
+                        alert("Thanks for choosing Zbank");
+                
+            } else {
+                alert("You have entered the wrong code")
+            }
+
+        }else {
+            alert("Wrong pin!")
+        }
+
+
+
+    
+    </script>
+</body>
+</html>
